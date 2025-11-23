@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Ready Player 1</title>
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <main>
-        <section id="sky"></section>
+        <section id="sky">
+            <div id="clouds">
+                <div class="cloud" id="cloud"></div>
+            </div>
+            <div id="sun"></div>
+        </section>
         <section id="life">
+            <div id="wind">
+                <div class="leaf"></div>
+                <div id="bird"></div>
+            </div>
             <h1>
                 <button id="start"  onclick="window.location.href = 'pages/store.html'">START</button>
             </h1>
@@ -21,10 +30,29 @@
                 <div id="trunk"></div>
                 <div id="roots"></div>
             </div>
-            <div id="firepit"></div>
+            <div id="firepit">
+                <div id="smoke"></div>
+                <div id="fire"></div>
+                <div id="logs">
+                    <div id="log1"></div>
+                    <div id="log2"></div>
+                </div>
+                
+            </div>
             <div id="house">
                 <div id="roof"></div>
-                <div id="walls"></div>
+                <div class="wall">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div class="wall">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div class="wall">
+                    <div id="door"></div>
+                </div>
+                
             </div>
         </section>
     </main>
