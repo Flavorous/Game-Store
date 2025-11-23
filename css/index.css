@@ -29,14 +29,40 @@ main{
     background-color: #21652a;
     height: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
+    
 }
 
 #sky{
     width: 100%;
     background-color: #271d80;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+#sun{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.cloud{
+    background-color: white;
+    width: 150px;
+    height: 80px;
+    border-radius: 40px;
+    position: relative;
+    top: 50px;
+    left: 200px;
+    opacity: 0.8;
 }
 
 #life {
@@ -46,6 +72,33 @@ main{
     flex-direction: row;
     display: flex;
     justify-content: center;
+}
+
+#wind {
+    position: relative;
+    top: -5em;
+    left: -10em;
+    font-size: 24px;
+    
+}
+
+
+#bird{
+   
+    font-size: 24px;
+    background-color: white;
+}
+
+#wing1{
+    
+    font-size: 24px;
+    color: white;
+}
+
+#wing2{
+    height: auto;
+    font-size: 24px;
+    color: white;
 }
 
 #start:hover {
@@ -81,15 +134,53 @@ main{
 }
 
 #house {
-    
+    position: relative;
+    top: -5em;
 }
 
 #roof {
-    
+    background-color: maroon;
+    width: 150px;
+    height: 80px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 #walls {
-    
+    background-color: beige;
+    width: 150px;
+    height: 100px;  
 }
 
-#firepit{}
+#firepit{
+
+}
+
+#smoke{
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+    top: -20px;
+    left: 10px;
+    opacity: 0.5;
+}
+
+#fire{
+    background-color: orange;
+    width: 40px;
+    height: 60px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+#logs{
+    background-color: brown;
+    width: 60px;
+    height: 20px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    transform: rotate(20deg);
+}
+
+
