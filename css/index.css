@@ -48,13 +48,13 @@ main{
     background-image: linear-gradient(to bottom, #61C2E8, #4B9BBD);
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
 
 }
 
 #sun{
-    background-color: #FFFF78;
+    background-color: #E6E64C;
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -67,6 +67,9 @@ main{
     display: flex;
     flex-direction: row;
     gap: 2em;
+    justify-content: space-around;
+    
+    
 }   
 
 #cloud{
@@ -84,7 +87,7 @@ main{
     background-image: url("/assets/cloud2.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 150px;
+    width: 200px;
     height: auto;
     position: relative;
     top: 20px;
