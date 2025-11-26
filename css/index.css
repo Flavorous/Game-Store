@@ -24,6 +24,15 @@ main{
 
 }
 
+.grass{
+    
+    gap: 2em;
+    background-image: url("../images/grass.png"), url("/assets/Grass\ Single.png");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;    
+    
+}  
+
 #ground {
     width: 100%;
     background-color: #2c5231;
@@ -199,11 +208,5 @@ main{
     left: 10px;
     transform: rotate(-20deg);
 }
-.grass{
-    position: relative;
-    gap: 2em;
-    background-image: url("../images/grass.png"), url("/assets/Grass\ Single.png");
-    background-repeat: repeat, no-repeat;
-    background-size: auto, contain;
-}   
+ 
 
