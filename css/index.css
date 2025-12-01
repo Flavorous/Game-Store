@@ -1,3 +1,8 @@
+:root{ 
+    overflow-x: hidden;
+    overflow-y: hidden ;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -6,12 +11,14 @@ main{
     height: 100vh;
     margin: 0;  
     padding: 0;
-
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 @keyframes moveClouds {
-    0% {transform: translateX(0);}
+    0% {transform: translateX(-120vw);}
     100% {transform: translateX(100vw);}
+    
 }
 
 @keyframes moveGrass {
@@ -28,7 +35,27 @@ main{
     100% {background-image: url("../assets/grass1.png");}
 }
 
+@keyframes moveWind {
+    0% {background-image: url("../assets/wind1.png"); transform: translateX(0vw); opacity: 0;}
+    15% {background-image: url("../assets/wind1.png"); opacity: 1;}
+    25% {background-image: url("../assets/wind1.png"); opacity: 0;}
+    30% {background-image: url("../assets/wind1.png"); opacity: 0;}
+    35% {background-image: url("../assets/wind2.png"); opacity: 1;}
+    55% {background-image: url("../assets/wind2.png"); opacity: 0;}
+    60% {background-image: url("../assets/wind2.png"); opacity: 0;}
+    65% {background-image: url("../assets/wind3.png"); opacity: 1;}
+    70% {background-image: url("../assets/wind3.png"); opacity: 0;}
+    75% {background-image: url("../assets/wind3.png"); opacity: 0;}
+    85% {background-image: url("../assets/wind4.png"); opacity: 1;}
+    90% {background-image: url("../assets/wind4.png"); opacity: 0;}
+    100% {background-image: url("../assets/wind4.png"); transform: translateX(100vw); opacity: 0;}
+}
+
 #start {
+    position: absolute;
+    left: 40%;
+    margin: auto;
+    bottom: 40%;
     font-size: 48px;
     font-weight: bold;  
     color: var(--primary-color);
@@ -40,7 +67,7 @@ main{
     text-shadow:   -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;;
+    1px 1px 0 #000;
 
 }
 
@@ -50,13 +77,10 @@ main{
     background-size: 7%;
     width: 100%;
     height: 100%;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: moveGrass;
-
-
-    
 }  
 
 #ground {
@@ -65,13 +89,13 @@ main{
     height: 100%;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;    
+    flex-direction: row;        
 }
 
 #sky{
     width: 100%;
     background-image: linear-gradient(to bottom, #61C2E8, #4B9BBD);
-    height: 200%;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -85,7 +109,7 @@ main{
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     top: 20px;
     right: 1em;
 }
@@ -95,10 +119,8 @@ main{
     flex-direction: row;
     gap: 5em;
     justify-content: space-around;
-    animation: wrapAcross 10s linear infinite;
-    animation-name: moveClouds;
     width: auto;
-    height: auto;
+    height: auto; 
 }   
 
 #cloud{
@@ -111,6 +133,8 @@ main{
     top: 30px;
     left: 100PX;
     opacity: 0.8;
+    animation: wrapAcross 30s linear infinite;
+    animation-name: moveClouds;
 }
 
 #cloud2{
@@ -123,6 +147,8 @@ main{
     top: 20px;
     left: 500px;
     opacity: 0.8;
+    animation: wrapAcross 32s linear infinite;
+    animation-name: moveClouds;
 }
 
 #cloud3{
@@ -130,10 +156,12 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     width: 300px;
-    height: 200px;
+    height: 300px;
     position: absolute;
     left: 1200PX;
     opacity: 0.8;
+    animation: wrapAcross 40s linear infinite;
+    animation-name: moveClouds;
 }
 
 #life {
@@ -143,6 +171,19 @@ main{
     flex-direction: row;
     display: flex;
     justify-content: center;
+}
+
+#wind {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 30%;
+    height: 10%;
+    overflow: hidden;
+    animation: moveWind 20s linear infinite;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
 }
 
 #start:hover {
@@ -234,7 +275,7 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 2em;
+    top: 5em;
     display: flex;
     flex-direction: column;     
     align-items: center;
@@ -245,7 +286,6 @@ main{
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    
     opacity: 0.5;
 }
 
